@@ -1,0 +1,34 @@
+{
+  "name": "vui-kit",
+  "version": "0.0.1",
+  "description": "Gorgeous UI kit for vuejs 3",
+  "main": "dist/library.min.mjs",
+  "scripts": {
+    "build:vue": "rollup -c && rollup -c --environment MINIFY",
+    "build:lib": "rimraf dist && npm run build:vue",
+    "publish:lib": "npm run build:lib && npm publish"
+  },
+  "author": "Vladislav Aituganov",
+  "license": "ISC",
+  "dependencies": {
+    "maska": "^2.1.8"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.3.2",
+    "vee-validate": "^4.8.6",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "rimraf": "^5.0.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-scss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.62.1"
+  }
+}
