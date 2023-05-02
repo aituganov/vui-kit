@@ -8,7 +8,7 @@ import vue from 'rollup-plugin-vue'
 
 export default () => {
   let config = [{
-    input: 'src/components/index.ts',
+    input: 'src/index.ts',
     output: {
       format: 'cjs',
       file: 'dist/library.mjs',
