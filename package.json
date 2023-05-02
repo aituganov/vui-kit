@@ -1,8 +1,12 @@
 {
-  "name": "vui-kit",
+  "name": "@v.aituganov/vui-kit",
   "version": "0.0.1",
   "description": "Gorgeous UI kit for vuejs 3",
   "main": "dist/library.min.mjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aituganov/vui-kit.git"
+  },
   "scripts": {
     "build:vue": "rollup -c && rollup -c --environment MINIFY",
     "build:lib": "rimraf dist && npm run build:vue",
