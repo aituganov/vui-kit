@@ -1,7 +1,7 @@
 <template>
   <div v-if="show" class="ui-modal ui-modal-backdrop flex" @click.self="close">
     <div
-      class="ui-modal-content flex flex-col justify-center p-6 tablet:justify-start tablet:p-12 tablet:rounded-2xl"
+      class="ui-modal-content flex flex-col justify-center p-6 sm:justify-start sm:p-12 sm:rounded-2xl"
     >
       <div>
         <slot name="title">
@@ -89,7 +89,7 @@ $color-backdrop: rgba($color-black, 0.5);
     position: relative;
     width: 100%;
 
-    @screen tablet {
+    @screen sm {
       height: auto;
       min-height: unset;
       max-width: 500px;
@@ -100,7 +100,7 @@ $color-backdrop: rgba($color-black, 0.5);
       font-weight: 700;
       line-height: 120%;
 
-      @screen tablet {
+      @screen sm {
         font-size: 36px;
       }
     }
