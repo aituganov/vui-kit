@@ -1,5 +1,6 @@
 import type { App } from 'vue'
 import { Mask, vMaska } from 'maska'
+import './validators'
 import './style.css'
 
 export type VUIKitOpts = {
