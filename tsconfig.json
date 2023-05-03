@@ -1,17 +1,18 @@
 {
-  // "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
     "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     },
-    "module": "ESNext"
+    "moduleResolution": "node",
   },
-
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
-    }
+  "exclude": [
+    "node_modules"
   ]
 }

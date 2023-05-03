@@ -1,14 +1,23 @@
 {
   "name": "@v.aituganov/vui-kit",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "Gorgeous UI kit for vuejs 3",
-  "main": "dist/library.min.mjs",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/vui-kit.umd.cjs",
+  "module": "./dist/vui-kit.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vui-kit.js",
+      "require": "./dist/vui-kit.umd.cjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aituganov/vui-kit.git"
   },
   "scripts": {
-    "build:vue": "rollup -c && rollup -c --environment MINIFY",
+    "build:vue": "vite build",
     "build:lib": "rimraf dist && npm run build:vue",
     "publish:lib": "npm run build:lib && npm publish"
   },
@@ -23,16 +32,9 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@vitejs/plugin-vue": "^4.2.1",
     "rimraf": "^5.0.0",
-    "rollup": "^2.79.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-scss": "^4.0.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "rollup-plugin-vue": "^6.0.0",
-    "sass": "^1.62.1"
+    "vite": "^4.3.4",
+    "vite-plugin-dts": "^2.3.0"
   }
 }
