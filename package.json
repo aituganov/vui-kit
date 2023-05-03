@@ -1,15 +1,17 @@
 {
   "name": "@v.aituganov/vui-kit",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Gorgeous UI kit for vuejs 3",
-  "type": "module",
   "files": ["dist"],
-  "main": "./dist/vui-kit.umd.cjs",
-  "module": "./dist/vui-kit.js",
+  "main": "./dist/vui-kit.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vui-kit.js",
       "require": "./dist/vui-kit.umd.cjs"
+    },
+    "./styles": {
+      "default": "./dist/style.css"
     }
   },
   "repository": {
