@@ -1,8 +1,9 @@
 {
   "name": "@v.aituganov/vui-kit",
-  "version": "0.0.13",
+  "version": "0.0.24",
   "description": "Gorgeous UI kit for vuejs 3",
   "files": ["dist"],
+  "type": "module",
   "main": "./dist/vui-kit.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -20,7 +21,7 @@
   },
   "scripts": {
     "build:vue": "vite build",
-    "build:lib": "npm run build:vue",
+    "build:lib": "rimraf dist && npm run build:vue",
     "publish:lib": "npm run build:lib && npm publish"
   },
   "author": "Vladislav Aituganov",
@@ -29,12 +30,15 @@
     "maska": "^2.1.8"
   },
   "peerDependencies": {
-    "tailwindcss": "^3.3.2",
     "vee-validate": "^4.8.6",
     "vue": "^3.2.47"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.1",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "rimraf": "^5.0.0",
+    "tailwindcss": "^3.3.2",
     "vite": "^4.3.4",
     "vite-plugin-dts": "^2.3.0"
   }

@@ -6,6 +6,7 @@
 
 <script lang="ts" setup>
 import { computed, defineAsyncComponent } from 'vue'
+import { iconsPathPrefix } from '@/index';
 
 const props = defineProps<{
   accent?: boolean
@@ -15,7 +16,7 @@ const props = defineProps<{
 }>()
 const component = computed(() => {
   const name = props.name
-  return defineAsyncComponent(() => import(`../../assets/icons/${name}.svg`))
+  return defineAsyncComponent(() => import(`${iconsPathPrefix}${name}.svg`))
 })
 </script>
 

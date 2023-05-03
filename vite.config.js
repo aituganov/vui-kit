@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import tailwindcss from 'tailwindcss'
 
 export default defineConfig({
   build: {
@@ -27,5 +28,5 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   },
-  plugins: [dts(), vue()]
+  plugins: [dts(), vue(), tailwindcss()]
 })
