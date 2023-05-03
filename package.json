@@ -1,6 +1,6 @@
 {
   "name": "@v.aituganov/vui-kit",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Gorgeous UI kit for vuejs 3",
   "type": "module",
   "files": ["dist"],
