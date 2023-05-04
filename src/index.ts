@@ -8,6 +8,7 @@ export type VUIKitOpts = {
 }
 
 import * as components from './components'
+
 import type { Phone, PhoneAvailable } from './components/UiPhoneInut';
 
 export let iconsPathPrefix: string;
@@ -31,3 +32,5 @@ export function prettyPhoneNumber(phone: Phone, availblePhones: PhoneAvailable[]
   }
   return `${phone.code} ${phone.number}`
 }
+
+export * from './components'
