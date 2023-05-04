@@ -1,6 +1,6 @@
 {
   "name": "@v.aituganov/vui-kit",
-  "version": "0.0.27",
+  "version": "0.0.29",
   "description": "Gorgeous UI kit for vuejs 3",
   "files": ["dist"],
   "type": "module",
@@ -29,10 +29,10 @@
   "dependencies": {
     "@vee-validate/i18n": "^4.8.6",
     "@vee-validate/rules": "^4.8.6",
-    "maska": "^2.1.8"
+    "maska": "^2.1.8",
+    "vee-validate": "^4.8.6"
   },
   "peerDependencies": {
-    "vee-validate": "^4.8.6",
     "vue": "^3.2.47"
   },
   "devDependencies": {

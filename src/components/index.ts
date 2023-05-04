@@ -1,6 +1,7 @@
 export * from './UiButton'
 export * from './UiCheckbox'
 export * from './UiErrorMessage'
+export * from './UiForm'
 export * from './UiIcon'
 export * from './UiInput'
 export * from './UiLabel'
