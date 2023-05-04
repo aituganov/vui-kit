@@ -54,7 +54,6 @@ defineProps({
 
 <style lang="scss" scoped>
 @import 'src/styles/colors';
-$color-accent-hover: #ffcc00;
 
 .ui-button {
   background-color: $color-accent;

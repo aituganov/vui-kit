@@ -205,7 +205,7 @@ function selectInput() {
       border-color: $color-black;
 
       @media (prefers-color-scheme: dark) {
-        border: 1px solid var(--vt-c-white);
+        border: 1px solid $color-white;
       }
     }
   }
@@ -217,8 +217,8 @@ function selectInput() {
   }
 
   .input-content {
-    background-color: var(--vt-c-white);
-    border: 1px solid var(--color-border);
+    background-color: $color-white;
+    border: 1px solid $color-border;
     height: $input-height;
 
     &:has(:-webkit-autofill) {
@@ -227,7 +227,7 @@ function selectInput() {
     }
 
     @media (prefers-color-scheme: dark) {
-      background-color: var(--vt-c-black);
+      background-color: $color-black;
     }
 
     input {

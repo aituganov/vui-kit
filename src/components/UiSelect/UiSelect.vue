@@ -234,7 +234,7 @@ function selectOption(e: Event, opt: any) {
 
     @media (prefers-color-scheme: dark) {
       background-color: $color-black;
-      border-color: var(--vt-c-white);
+      border-color: $color-white;
     }
 
     .options {

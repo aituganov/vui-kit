@@ -1,10 +1,14 @@
-$color-accent: var(--color-accent);
-$color-accent-hover: var(--color-accent-hover);
-$color-black: var(--color-black);
-$color-border: var(--color-border);
-$color-brown: var(--color-brown);
-$color-disabled: var(--color-disbled);
-$color-error: var(--color-error);
-$color-red: var(--color-red);
-$color-success: var(--color-success);
-$color-white: var(--color-white);
+$color-accent: var(--color-accent, #ffd900);
+$color-accent-hover: var(--color-accent-hover, #ffcc00);
+$color-black: var(--color-black, #050c26);
+$color-border: var(--color-border, rgba(60, 60, 60, 0.12));
+$color-brown: var(--color-brown, #4D3B3B); // TODO remove
+$color-disabled: var(--color-disbled, #A69D9D);
+$color-error: var(--color-error, #EA4335);
+$color-red: var(--color-red, #DC6655);
+$color-success: var(--color-success, hsla(160, 100%, 37%, 1));
+$color-white: var(--color-white, #FFFFFF);
+
+@media (prefers-color-scheme: dark) {
+  $color-border: var(--color-border, rgba(84, 84, 84, 0.48));
+}
