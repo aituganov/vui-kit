@@ -1,7 +1,4 @@
-export enum MessageType {
-  Success = 'success',
-  Error = 'error'
-}
+export type MessageType = 'success' | 'error';
 
 export type Message = {
   id?: string | number,
