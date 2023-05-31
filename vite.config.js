@@ -11,6 +11,7 @@ export default defineConfig({
       name: 'VUIKit',
       fileName: 'vui-kit',
     },
+    minify: 'terser',
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library

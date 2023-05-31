@@ -1,11 +1,13 @@
 <template>
-  <div class="ui-icon" :class="{ accent: accent, sm: sm, xs: xs }">
-    <component :is="component" />
-  </div>
+  <div 
+    v-html="svgIcon"
+    class="ui-icon"
+    :class="{ accent: accent, sm: sm, xs: xs }"
+  ></div>
 </template>
 
 <script lang="ts" setup>
-import { computed, defineAsyncComponent } from 'vue'
+import { computed, ref } from 'vue';
 import { iconsPathPrefix } from '@/index';
 
 const props = defineProps<{
@@ -14,10 +16,14 @@ const props = defineProps<{
   sm?: boolean
   xs?: boolean
 }>()
-const component = computed(() => {
-  const name = props.name
-  return defineAsyncComponent(() => import(`${iconsPathPrefix}${name}.svg`))
-})
+const svgRaw = ref()
+const loadSvgIcons = (name) => fetch(`${iconsPathPrefix}${name}.svg`)
+  .then(res => res.text())
+  .then(raw => svgRaw.value = raw)
+const svgIcon = computed(() => {
+  loadSvgIcons(props.name)
+  return svgRaw.value
+});
 </script>
 
 <style lang="scss" scoped>

@@ -1,6 +1,6 @@
 {
   "name": "@v.aituganov/vui-kit",
-  "version": "0.0.33",
+  "version": "0.0.39",
   "description": "Gorgeous UI kit for vuejs 3",
   "files": ["dist"],
   "type": "module",
@@ -41,6 +41,7 @@
     "postcss": "^8.4.23",
     "rimraf": "^5.0.0",
     "tailwindcss": "^3.3.2",
+    "terser": "^5.17.1",
     "vite": "^4.3.4",
     "vite-plugin-dts": "^2.3.0"
   }
